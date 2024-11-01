@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masuk</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body >
+	<main class="flex justify-center items-center flex-col h-screen">
+		<!-- Konten di sini -->
+		
+                <h2 class="text-center text-3xl font-bold font-mono">Masuk</h2>
+                <p class="text-center text-sm">Masukkan Informasi Akun Anda</p>
+                <section>
+                    <form action="{{ route('login') }}" method="POST" enctype="multipart/form-data">
+                        <label for="email">
+                            <span class="block my-3 text-[12px]">Email</span>
+                            <input type="email" name="email" value="{{ old('email') }}" class="ring-1 ring-[#979696] h-11 rounded-md w-full mb-1.5 invalid:border-red-900 invalid:ring-red-900" autofocus >
+                        </label>
+                        <label for="password">
+                            <span class="block my-3 text-[12px]">Kata sandi</span>
+                            <input type="password" name="password" class="ring-1 ring-[#979696] h-11 rounded-md w-full invalid:border-red-900 invalid:ring-red-900">
+                        </label>
+                        <button type="submit" name="masuk" class="h-11 rounded-md w-full bg-[#2C3E50] text-white font-bold mt-8 ">Masuk</button>
+                        <div class="flex justify-center">
+                            <a href="/register">Belum punya akun?</a>
+                        </div>
+                    </form>
+                </section>
+    </main>
+
+</body>
+</html>

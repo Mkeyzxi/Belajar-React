@@ -1,0 +1,10 @@
+didalam component react
+- pages
+- fragments
+- elements
+- layouts
+
+
+http://testphp.vulnweb.com/login.php
+burp suite
+

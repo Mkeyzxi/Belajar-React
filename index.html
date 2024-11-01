@@ -41,29 +41,64 @@
 		// )
 
 
-		function Nav({author}){
-			return (
-				<>
-					<h1>{author ? author : 'mbul'} ganteng banget</h1>
-					<p>indonesia kapan merdeka</p>
-				</>
-			);
-		}
+		// function Nav({author}){
+		// 	return (
+		// 		<>
+		// 			<h1>{author ? author : 'mbul'} ganteng banget</h1>
+		// 			<p>indonesia kapan merdeka</p>
+		// 		</>
+		// 	);
+		// }
 
 		// root.render(<Nav />)
 
+		// function HomePage(){
+		// 	return (
+		// 		<div>
+		// 			<Nav/>
+		// 			<Nav author="lia"/>
+		// 		</div>
+		// 	)
+		// }
+
+		// function HomePage(){
+		// 	const students = ['mbul', 'kia', 'lia'];
+			
+		// 	return (
+		// 		<>
+		// 			<ul>
+		// 				{
+		// 					students.map(student => {
+		// 						return <li key={student }>{ student }</li>
+		// 					})
+		// 				}
+		// 			</ul>
+		// 		</>
+		// 	)
+			
+		// }
+
+		
 		function HomePage(){
+			const [likes, setLikes] = React.useState(0);
+
+			function handleClick(){
+				setLikes(likes + 1);
+			}
 			return (
 				<div>
-					<Nav/>
-					<Nav author="lia"/>
+					<button onClick={handleClick}>likes ({likes})</button>
 				</div>
+				
 			)
 		}
+
+		
 
 		root.render(
 			<HomePage />
 		)
+
 	</script>
 </body>
 </html>
