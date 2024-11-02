@@ -31,8 +31,11 @@ import SubParagraf from "../Elements/SubParagraf";
 import AuthLayouts from "../Layouts/AuthLayouts";
 
 const Login = () => {
+	const handleClick = () => {
+		console.log("masuk");
+	}
 	return (
-		<AuthLayouts type="login">
+		<AuthLayouts type="login" login={handleClick}>
 			<Heading keyword="Masuk" />
 			<SubParagraf keyword="Masuk dan Nikmati Pengalamanannya" />
 			<form>
